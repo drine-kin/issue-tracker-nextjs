@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.radix-themes {
+  --default-font-family: var(--font-inter) !important;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
