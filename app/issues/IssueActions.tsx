@@ -1,7 +1,6 @@
 import { Button, Table } from "@radix-ui/themes";
 import Link from "next/link";
 import React from "react";
-import IssueStatusBadge from "../components/IssueStatusBadge";
 
 const IssueActions = () => {
   return (
