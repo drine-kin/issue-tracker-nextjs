@@ -1,9 +1,9 @@
 import React from "react";
-import Link from "next/link";
 
 import { Table } from "@radix-ui/themes";
 import prisma from "@/prisma/client";
 
+import Link from "../components/Link";
 import IssueStatusBadge from "../components/IssueStatusBadge";
 import IssueActions from "./IssueActions";
 
@@ -29,9 +29,7 @@ const IssuePage = async () => {
           {issues.map((issue) => (
             <Table.Row key={issue.id}>
               <Table.Cell>
-                <Link href={`/issues/${issue.id}`} className="cursor-pointer">
-                  {issue.title}
-                </Link>
+                <Link href={`/issues/${issue.id}`}>{issue.title}</Link>
                 <div className="block md:hidden">
                   <IssueStatusBadge status={issue.status} />
                 </div>
