@@ -13,6 +13,7 @@ const AssigneeSelect = () => {
       const { data } = await axios.get<User[]>("/api/users");
       setUsers(data);
     };
+
     fetchUsers();
   }, []);
 
