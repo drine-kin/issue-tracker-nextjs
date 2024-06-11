@@ -21,10 +21,12 @@ const columns: { label: string; value: keyof Issue; className?: string }[] = [
   {
     label: "Status",
     value: "status",
+    className: "hidden md:table-cell"
   },
   {
     label: "Created",
     value: "createdAt",
+    className: "hidden md:table-cell"
   },
 ];
 
@@ -53,7 +55,7 @@ const IssuePage = async ({ searchParams }: Props) => {
         <Table.Header>
           <Table.Row>
             {columns.map((column) => (
-              <Table.ColumnHeaderCell key={column.value}>
+              <Table.ColumnHeaderCell key={column.value} className={column.className}>
                 <NextLink
                   href={{ query: { ...searchParams, orderBy: column.value } }}
                 >
