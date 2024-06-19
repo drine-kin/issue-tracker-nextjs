@@ -1,5 +1,4 @@
-"uses client";
-
+"use client";
 import React from "react";
 import {
     ChevronLeftIcon,
