@@ -9,6 +9,7 @@ export interface IssueQuery {
     orderBy: keyof Issue;
     sortOrder: "asc" | "desc";
     page: string;
+    pageSize: string;
 }
 
 interface Props {
